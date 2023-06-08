@@ -4,7 +4,8 @@ const { sendMessage } = require("./message");
 const { getThreads } = require("./threads");
 
 /**
- * An helper function which goes through a list of threads and
+ * An helper function which goes through a list of threads and messages to check if that thread is replied by me
+ * if not then send a message else continue
  *
  * It takes the gmail service object as parameter
  */
