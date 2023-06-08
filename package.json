@@ -1,0 +1,19 @@
+{
+    "name": "auto-mail-response",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Siddharth Sahu",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    },
+    "dependencies": {
+        "@google-cloud/local-auth": "^2.1.0",
+        "googleapis": "^105.0.0",
+        "js-base64": "^3.7.5"
+    }
+}
