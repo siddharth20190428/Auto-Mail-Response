@@ -1,7 +1,8 @@
 /**
  * Lists the labels in the user's account.
  *
- * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
+ * It takes the gmail service object as parameter
+ * Returns an array of Labels
  */
 async function getLabels(gmail) {
     console.log("Fetching Labels");
@@ -18,7 +19,14 @@ async function getLabels(gmail) {
     return labels;
 }
 
-async function createLabel(gmail, name = "Jaadu") {
+/**
+ * Creates a label in the user's account.
+ *
+ * It takes the gmail service object and name as parameter
+ * Returns an object of Created label
+ */
+
+async function createLabel(gmail, name) {
     console.log("Creating Label");
     const label = await gmail.users.labels.create({
         userId: "me",
@@ -30,6 +38,11 @@ async function createLabel(gmail, name = "Jaadu") {
     return label;
 }
 
+/**
+ * Adds a label to an Email or Message
+ *
+ * It takes the gmail service object and message_id as parameter
+ */
 async function addLabelToEmail(gmail, message_id) {
     const labels = await getLabels(gmail);
     const labelName = "Vacation";

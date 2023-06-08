@@ -3,9 +3,14 @@ const { authorize } = require("./authorize");
 const { sendMessage } = require("./message");
 const { getThreads } = require("./threads");
 
+/**
+ * An helper function which goes
+ *
+ * It takes the gmail service object as parameter
+ */
 async function helper(gmail) {
     console.log("Getting threads");
-    const threads = await getThreads(gmail);
+    const threads = await getThreads(gmail, 3);
     console.log("Threads fetched");
 
     threads.forEach(async (thread) => {

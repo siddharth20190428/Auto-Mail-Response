@@ -45,7 +45,7 @@ async function saveCredentials(client) {
 
 /**
  * Load or request or authorization to call APIs.
- *
+ * @return {OAuth2Client} client
  */
 async function authorize() {
     let client = await loadExistingCredentials();
